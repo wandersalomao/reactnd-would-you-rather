@@ -1,0 +1,129 @@
+.main-auth {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-container {
+  width: 50%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.auth-container h1 {
+  margin-bottom: 0;
+}
+
+.auth-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field-container {
+  width: 100%;
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+
+.field-container .error {
+  color: red;
+  margin-top: 3px;
+}
+
+.auth-form input {
+  width: 100%;
+  height: 60px;
+  padding: 0 25px;
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.auth-form button {
+  width: 100%;
+  height: 60px;
+  margin-top: 25px;
+  background-color: #4272d7;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+
+.auth-form button:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.auth-form button:disabled {
+  background: #dddddd;
+}
+
+.auth-links {
+  color: #666666;
+  padding: 15px;
+}
+
+.auth-links a {
+  color: #4272d7;
+}
+
+/* alert-message */ 
+
+#alert-message {
+  visibility: hidden; 
+  min-width: 250px; 
+  margin-left: -125px; 
+  background-color: #2e7d32; 
+  color: #fff; 
+  text-align: center; 
+  border-radius: 2px; 
+  padding: 16px; 
+  position: fixed;
+  z-index: 1;
+  left: 50%; 
+  top: 30px; 
+}
+
+#alert-message.show.error {
+  background-color: red; 
+}
+
+#alert-message.show {
+  visibility: visible;
+
+  /* Add animation: Take 0.5 seconds to fade in and out the alert. 
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the alert in and out */
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;} 
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;} 
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
