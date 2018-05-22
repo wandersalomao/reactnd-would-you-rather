@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Field } from 'redux-form'
 import { requiredValidation } from '../_utils/field-validation'
+import { register } from '../../actions/auth_actions'
 import InputField from '../InputField'
 import SubmitForm from '../SubmitForm'
 
@@ -16,8 +17,7 @@ class RegisterPage extends Component {
 
     onSubmit(values) {
         const { username, name } = values
-        alert(username + ', ' + name)
-        // this.props.dispatch(login(username))
+        this.props.dispatch(register(username, name))
     }
 
     render() {

@@ -25,7 +25,6 @@ function _displayAlertMessage(messageText, messageType = '') {
     alertMessage.innerText = messageText
 
     // After 3 seconds, remove the show class from DIV
-    // setTimeout(() => { alertMessage.className = alertMessage.className.replace("show", ""); }, 3000)
     setTimeout(() => { 
         alertMessage.classList.remove("show")
         alertMessage.classList.remove(messageType)

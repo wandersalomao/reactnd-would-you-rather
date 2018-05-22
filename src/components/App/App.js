@@ -6,18 +6,25 @@ import RegisterPage from '../RegisterPage'
 import PageNotFound from '../PageNotFound'
 import Dashboard from '../Dashboard'
 import LoadingBar from 'react-redux-loading'
+import { handleInitialData } from '../../actions/shared_actions'
 import { PrivateRoute } from '../PrivateRoute'
 import { history } from '../../history/history.js';
 import './App.css';
 
 class App extends Component {
 
+    componentDidMount() {
+        this.props.dispatch(handleInitialData())            
+    }
+
     render() {
         return (
             <Router history={history}>
                 <Fragment>
                     <LoadingBar />
+                    
                     <div id="alert-message">Alert Message goes here...</div>
+                    {this.props.loading === true ? null : 
                     <div>
 						<Switch>
 							<Redirect exact path="/" to="/app" />
@@ -26,7 +33,7 @@ class App extends Component {
 							<PrivateRoute path="/app" component={Dashboard} />
 							<Route component={PageNotFound} />
 						</Switch>
-                    </div>
+                    </div>}
                 </Fragment>
             </Router>
     );
@@ -34,10 +41,12 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  const { alert } = state
-  return {
-      message: alert.message
-  }
+    const { alert, users } = state
+
+    return {
+        message: alert.message, 
+        loading: Object.keys(users).length === 0
+    }
 }
 
 export default connect(mapStateToProps)(App)

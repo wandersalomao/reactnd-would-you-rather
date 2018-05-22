@@ -1,0 +1,2 @@
+export const LOAD_QUESTIONS = 'LOAD_QUESTIONS',
+             ADD_QUESTION = 'ADD_QUESTION';

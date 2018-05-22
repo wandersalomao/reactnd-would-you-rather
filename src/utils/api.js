@@ -1,17 +1,31 @@
-import { _getUsers } from './_DATA.js'
+import { _getUsers, _getQuestions, _login, _register } from './_DATA.js'
 
-export function authenticate(username) {
-    return new Promise((res, rej) => {
-        _getUsers().then( users => {
-
-            const user = users[username]
-
-            if (user) {
-                localStorage.setItem('user', JSON.stringify(user));
-                res(user)
-            } else {
-                rej("Login failed, please check your credentials")
+export function loginUser(username) {
+    return _login(username)
+        .then(
+            user => {
+                localStorage.setItem('user', JSON.stringify(user))
+                return Promise.resolve(user)
             }
-        })
-    })
+        )
+}
+
+export function registerUser(username, name) {
+    return _register({username, name})
+        .then(
+            user => {
+                localStorage.setItem('user', JSON.stringify(user))
+                return Promise.resolve(user)
+            }    
+        )
+}
+
+export function getInitialData () {
+    return Promise.all([
+      _getUsers(),
+      _getQuestions(),
+    ]).then(([users, questions]) => ({
+      users,
+      questions
+    }))
 }
