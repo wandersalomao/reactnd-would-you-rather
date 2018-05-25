@@ -10,6 +10,10 @@ export function loginUser(username) {
         )
 }
 
+export function logoutUser() {
+    localStorage.removeItem('user');
+}
+
 export function registerUser(username, name) {
     return _register({username, name})
         .then(

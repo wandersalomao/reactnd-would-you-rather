@@ -1,0 +1,109 @@
+.dashboard {
+    display: grid; 
+    height: 100vh;
+    grid-template-columns: 15em auto;
+    grid-template-rows: 3.5em auto;
+}
+
+.app-logo {
+    background: rgb(41, 53, 74); 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-logo h1 {
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+}
+
+.app-logo div {
+    margin: 0px 0px 0px 10px;
+    color: white;
+}
+
+.app-bar {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.app-bar-menus {
+    align-self: center;
+    color: rgb(171, 171, 171);
+    padding: 10px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.app-bar-menus > * {
+    /* align-self: center; */
+    margin-right: 10px;
+}
+
+.app-bar-menus > .logout:hover {
+    cursor: pointer;
+    color: rgb(41, 53, 74);
+}
+
+.content-wrapper {
+    max-width: 60em;
+}
+
+/* .username {
+    display: flex;
+} */
+
+
+.avatar {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    /* background-image: url('./icons/pikachu.jpeg'); */
+    /* background-image: url('../../images/sarahedo.png'); */
+    background-size: cover;
+    background-position: top center;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 50%;
+}
+
+
+
+.menus {
+    height: 100%;
+    background-color: rgb(41, 53, 74);
+}
+
+.menus hr {
+    /* width: 90%; */
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+    height: 1px;
+    background-color: rgb(245, 245, 245);
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 15px 15px 25px;
+    color: rgb(171, 171, 171);
+    text-decoration: none;
+}
+
+.menu-item span {
+    padding: 10px;
+}
+
+.menu-active, .menu-item:hover {
+    background-color: rgb(25, 33, 44);
+    color: rgb(245, 245, 245);;
+}  
+
+.menu-active {
+    border-left: 3px solid rgb(245, 245, 245);;
+}

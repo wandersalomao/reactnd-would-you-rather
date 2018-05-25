@@ -2,7 +2,7 @@ let users = {
     sarahedo: {
 		id: 'sarahedo',
 		name: 'Sarah Edo',
-		avatarURL: '../images/sarahedo.png',
+		avatarURL: '/images/sarahedo.png',
 		answers: {
 			"8xf0y6ziyjabvozdd253nd": 'optionOne',
 			"6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -14,7 +14,7 @@ let users = {
     tylermcginnis: {
 		id: 'tylermcginnis',
 		name: 'Tyler McGinnis',
-		avatarURL: '../images/tylermcginnis.png',
+		avatarURL: '/images/tylermcginnis.png',
 		answers: {
 			"vthrdm985a262al8qx3do": 'optionOne',
 			"xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
     johndoe: {
 		id: 'johndoe',
 		name: 'John Doe',
-		avatarURL: '../images/johndoe.png',
+		avatarURL: '/images/johndoe.png',
 		answers: {
 			"xj352vofupe1dqz9emx13r": 'optionOne',
 			"vthrdm985a262al8qx3do": 'optionTwo',
@@ -208,7 +208,7 @@ function formatUser({ username, name }) {
 	return {
 		id: username,
 		name: name, 
-		avatarURL: '',
+		avatarURL: '/images/default_avatar.png',
 		answers: {}, 
 		questions: []
 	}

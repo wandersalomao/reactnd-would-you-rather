@@ -1,6 +1,6 @@
 import { showLoading, hideLoading } from 'react-redux-loading'
-import { AUTH_SUCCESS, AUTH_FAILURE } from './types/auth_types'
-import { loginUser, registerUser } from '../utils/api'
+import { AUTH_SUCCESS, AUTH_FAILURE, AUTH_LOGOUT } from './types/auth_types'
+import { loginUser, logoutUser, registerUser } from '../utils/api'
 import { history } from '../history/history.js'
 import { alertError } from './alert_actions'
 import { addUser } from './user_actions'
@@ -24,6 +24,14 @@ export function login(username) {
     };
 }
 
+export function logout() {
+    return dispatch => {
+        logoutUser()
+        dispatch({type: AUTH_LOGOUT})
+        history.push('/login')        
+    }
+}
+
 export function register(username, name) {
     return (dispatch, getState) => {
         dispatch(showLoading())
@@ -44,10 +52,5 @@ export function register(username, name) {
     };
 }
 
-function authSuccess(user) { return { type: AUTH_SUCCESS, user } }
-function authFailure(error) { return { type: AUTH_FAILURE, error } }
-
-// function logout() {
-//     userService.logout();
-//     return { type: userConstants.LOGOUT };
-// }
+export function authSuccess(user) { return { type: AUTH_SUCCESS, user } }
+export function authFailure(error) { return { type: AUTH_FAILURE, error } }
