@@ -50,29 +50,16 @@
     color: rgb(41, 53, 74);
 }
 
-.content-wrapper {
-    max-width: 60em;
-}
-
-/* .username {
-    display: flex;
-} */
-
-
 .avatar {
     width: 25px;
     height: 25px;
     margin-right: 5px;
     background-repeat: no-repeat;
-    /* background-image: url('./icons/pikachu.jpeg'); */
-    /* background-image: url('../../images/sarahedo.png'); */
     background-size: cover;
     background-position: top center;
     border: 1px solid rgb(245, 245, 245);
     border-radius: 50%;
 }
-
-
 
 .menus {
     height: 100%;

@@ -112,6 +112,32 @@ let users = {
 			votes: ['tylermcginnis'],
 			text: 'write Swift'
 		}
+	},
+    "sc478vofuped5qz8emx45d": {
+		id: 'sc478vofuped5qz8emx45d',
+		author: 'johndoe',
+		timestamp: 1493579767190,
+		optionOne: {
+			votes: [],
+			text: 'write JavaScript',
+		},
+		optionTwo: {
+			votes: [],
+			text: 'write Swift'
+		}
+	},
+    "rd821gfhypdx8es2pla23s": {
+		id: 'rd821gfhypdx8es2pla23s',
+		author: 'tylermcginnis',
+		timestamp: 1493579767190,
+		optionOne: {
+			votes: [],
+			text: 'Play Soccer',
+		},
+		optionTwo: {
+			votes: [],
+			text: 'Play Volleyball'
+		}
     },
 }
 

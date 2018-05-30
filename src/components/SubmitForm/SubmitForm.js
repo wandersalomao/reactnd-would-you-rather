@@ -18,7 +18,7 @@ class SubmitForm extends Component {
 
     componentWillReceiveProps(nextProps) {
         /**
-         * redux-form provides a prop named 'valid'that indicates if the form is valid or not
+         * redux-form provides a prop named 'valid' that indicates if the form is valid or not
          * We are using this property here to change the state and enable/disable the button
          */
         const { valid } = nextProps

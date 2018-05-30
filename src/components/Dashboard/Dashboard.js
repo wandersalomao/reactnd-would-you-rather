@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
-import QuestionList from '../QuestionList';
+import QuestionListPage from '../QuestionListPage';
+import QuestionPageDetails from '../QuestionPageDetails'
 import Leaderboard from '../Leaderboard';
 import { logout } from '../../actions/auth_actions'
 import './Dashboard.css';
@@ -46,7 +47,7 @@ class Dashboard extends Component {
                 </div>
 
                 <aside className="menus">
-                <hr/>
+                    <hr/>
                     <NavLink exact className="menu-item" 
                         to="/app/questions" 
                         activeClassName="menu-active">
@@ -73,7 +74,8 @@ class Dashboard extends Component {
 
                     <Switch>
                         <Redirect exact path={`${match.path}`} to={`${match.path}/questions`}/>
-                        <Route exact path={`${match.path}/questions`} component={QuestionList} />
+                        <Route exact path={`${match.path}/questions`} component={QuestionListPage} />
+                        <Route exact path={`${match.path}/question/:id`} component={QuestionPageDetails} />
                         <Route exact path={`${match.path}/leaderboard`} component={Leaderboard} />
                         <Redirect to="/notFound"/>
                     </Switch>

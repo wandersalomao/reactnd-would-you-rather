@@ -1,0 +1,149 @@
+/****************************
+ * Questions
+ ***************************/ 
+
+ .questions {
+    margin: 0;
+	padding: 0px 40px;
+	list-style-type: none;
+}
+
+.questions:last-child {
+    margin-bottom: 25px;
+}
+
+.question {
+    border: 1px transparent;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.question-clickable:hover {
+    box-shadow: 5px 5px 0px 0px hsla(0, 0%, 70%, .8);
+    background-color: rgb(171, 171, 171);
+    color: white;
+    cursor: pointer;
+}
+
+.question-option-clickable:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.question h2 {
+    font-size: 1.4em;
+    margin: 5px;
+    align-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.question h2 div {
+    align-self: center;
+}
+
+.question-option {
+    align-self: center;
+    padding: 15px;
+    color: rgb(171, 171, 171);
+}
+
+.question-options {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.question-option1 {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
+    text-align: center;
+    background-color: lightgreen;
+    padding: 15px;
+    margin: 0px 4px 0px 0px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.question-option2 {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(225, 75, 70);
+    padding: 15px;
+    margin: 0px 0px 0px 4px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.or-label {    
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 1;
+}
+
+.question-check {
+    position: absolute;
+    display: inline-block;
+}
+
+.question-percentage {
+    display: inline-block;
+    font-size: 3.2em;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.question-votes {
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.question-answered {
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.question-option1 > .question-check {
+    top: 10px;
+    left: 10px;
+}
+.question-option2 > .question-check {
+    top: 10px;
+    right: 10px;
+}
+.question-option1 > .question-percentage {
+    color: rgb(85, 170, 85)
+}
+.question-option1 > .question-votes {
+    color: rgb(136, 204, 136)
+}
+.question-option2 > .question-percentage {
+    color: rgb(147, 0, 0)
+}
+.question-option2 > .question-votes {
+    color: rgb(253, 163, 163)
+}
