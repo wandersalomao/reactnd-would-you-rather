@@ -1,5 +1,5 @@
 import { LOAD_USERS, ADD_USER } from '../actions/types/user_types'
-import { SAVE_QUESTION_ANSWER } from '../actions/types/question_types'
+import { SAVE_QUESTION, SAVE_QUESTION_ANSWER } from '../actions/types/question_types'
 
 export default function users(state = {}, action) {
     switch (action.type) {
@@ -10,8 +10,16 @@ export default function users(state = {}, action) {
                 ...state, 
                 [action.user.id]: action.user
             }
-        // we listen to the save question action so that we can update the list of answers 
-        // of the logged user    
+
+        case SAVE_QUESTION: 
+            return {
+                ...state, 
+                [action.question.author]: {
+                    ...state[action.question.author], 
+                    questions: state[action.question.author].questions.concat([action.question.id])
+                }
+            }
+        
         case SAVE_QUESTION_ANSWER: 
             const { authedUser, qid, answer } = action.info
 			return {

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 class InputField extends Component {
     render() {
-        const {input, label, type, meta: { touched, error }} = this.props
+        const { input, label, placeholder, type, meta: { touched, error } } = this.props
 
         return (
             <div className="field-container">
-                <input {...input} placeholder={label} type={type} />
+                {label && <label>{label}</label>}
+                <input {...input} placeholder={placeholder} type={type} />
                 {touched && error && <div className="error">{error}</div>}
             </div>
         );

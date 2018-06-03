@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import NewQuestion from '../NewQuestion';
 import QuestionListPage from '../QuestionListPage';
 import QuestionPageDetails from '../QuestionPageDetails'
 import Leaderboard from '../Leaderboard';
@@ -26,7 +27,7 @@ class Dashboard extends Component {
             
             <div className="dashboard">
                 <div className="app-logo">
-                    <h1>Would you Rather </h1>
+                    <h1>Would You Rather </h1>
                     <div>
                         <i className="far fa-question-circle fa-2x"></i>
                     </div>
@@ -74,8 +75,9 @@ class Dashboard extends Component {
 
                     <Switch>
                         <Redirect exact path={`${match.path}`} to={`${match.path}/questions`}/>
+                        <Route exact path={`${match.path}/add`} component={NewQuestion} />
+                        <Route exact path={`${match.path}/questions/:id`} component={QuestionPageDetails} />
                         <Route exact path={`${match.path}/questions`} component={QuestionListPage} />
-                        <Route exact path={`${match.path}/question/:id`} component={QuestionPageDetails} />
                         <Route exact path={`${match.path}/leaderboard`} component={Leaderboard} />
                         <Redirect to="/notFound"/>
                     </Switch>

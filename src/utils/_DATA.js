@@ -119,11 +119,11 @@ let users = {
 		timestamp: 1493579767190,
 		optionOne: {
 			votes: [],
-			text: 'write JavaScript',
+			text: 'write a letter',
 		},
 		optionTwo: {
 			votes: [],
-			text: 'write Swift'
+			text: 'send an email'
 		}
 	},
     "rd821gfhypdx8es2pla23s": {

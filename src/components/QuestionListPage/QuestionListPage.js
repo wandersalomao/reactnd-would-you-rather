@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { QUESTIONS_FILTER } from '../_utils/constants'
 import QuestionList from '../QuestionList'
+import { history } from '../../history/history.js'
 import './QuestionListPage.css'
 
 class QuestionListPage extends Component {
@@ -12,6 +13,10 @@ class QuestionListPage extends Component {
 
     onFilterClicked(filterOption) {
         this.setState(() => ({ filterOption }))
+    }
+
+    onAddNewQuestionClicked() {
+        history.push('/app/add')
     }
 
     render() {
@@ -36,7 +41,7 @@ class QuestionListPage extends Component {
                                 Answered
                             </span>
 
-                            <button>Add Question</button>
+                            <button onClick={() => this.onAddNewQuestionClicked()}>Add Question</button>
                         </div>                        
                     </div>
                 </div>

@@ -3,6 +3,7 @@
     height: 100vh;
     grid-template-columns: 15em auto;
     grid-template-rows: 3.5em auto;
+    background-color: white;
 }
 
 .app-logo {
@@ -41,7 +42,6 @@
 }
 
 .app-bar-menus > * {
-    /* align-self: center; */
     margin-right: 10px;
 }
 
@@ -67,7 +67,6 @@
 }
 
 .menus hr {
-    /* width: 90%; */
     margin-top: 0;
     margin-bottom: 0;
     border: none;

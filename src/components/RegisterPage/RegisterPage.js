@@ -35,14 +35,14 @@ class RegisterPage extends Component {
                             name="username" 
                             component={InputField}
                             type="text" 
-                            label="Username" 
+                            placeholder="Username" 
                             validate={[requiredValidation]} />
 
                         <Field 
                             name="name" 
                             component={InputField}
                             type="text" 
-                            label="Full Name" 
+                            placeholder="Full Name" 
                             validate={[requiredValidation]} />
                         
                     </SubmitForm>

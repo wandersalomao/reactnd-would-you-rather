@@ -1,8 +1,4 @@
-/****************************
- * Questions
- ***************************/ 
-
- .questions {
+.questions {
     margin: 0;
 	padding: 0px 40px;
 	list-style-type: none;
@@ -28,7 +24,7 @@
 }
 
 .question-option-clickable:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
     cursor: pointer;
 }
 

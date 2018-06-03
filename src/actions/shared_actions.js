@@ -4,6 +4,11 @@ import { loadUsers } from './user_actions'
 import { authSuccess } from './auth_actions'
 import { getInitialData } from '../utils/api'
 
+/**
+ * Action used to load the initial data. It loads users and questions and then check if there is a login 
+ * token available, and if so dispatches the login action to process the login and redirects the user to 
+ * the home page 
+ */
 export function handleInitialData() {
     return (dispatch) => {
         dispatch(showLoading())

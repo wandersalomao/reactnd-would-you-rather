@@ -13,8 +13,11 @@ import './App.css';
 
 class App extends Component {
 
+    /**
+     * Load the initial data once the App component is ready
+     */
     componentDidMount() {
-        this.props.dispatch(handleInitialData())            
+        this.props.dispatch(handleInitialData())
     }
 
     render() {
@@ -24,7 +27,7 @@ class App extends Component {
                     <LoadingBar />
                     
                     <div id="alert-message">Alert Message goes here...</div>
-                    {this.props.loading === true ? null : 
+                        {this.props.loading === true ? null : 
                     <div>
 						<Switch>
 							<Redirect exact path="/" to="/app" />

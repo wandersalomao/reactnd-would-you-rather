@@ -5,6 +5,11 @@ import { history } from '../history/history.js'
 import { alertError } from './alert_actions'
 import { addUser } from './user_actions'
 
+/**
+ * Login action that tries to authenticate the passed user. If the authentication is successfull, 
+ * redirects the user to the home page (/app). Otherwise, display an error message. 
+ * @param {*} username - The username of the user trying to authenticate
+ */
 export function login(username) {
     return (dispatch, getState) => {
         dispatch(showLoading())
@@ -24,6 +29,9 @@ export function login(username) {
     };
 }
 
+/**
+ * Logout action. It logs the user out and redirects the flow to the login page
+ */
 export function logout() {
     return dispatch => {
         logoutUser()
@@ -32,6 +40,12 @@ export function logout() {
     }
 }
 
+/**
+ * Register action used to create a new user with the given username and name. If successfull, 
+ * redirects the user to the home page (/app). Otherwise, display an error message.  
+ * @param {*} username - The username of the user being registered
+ * @param {*} name - The name of the user being registered
+ */
 export function register(username, name) {
     return (dispatch, getState) => {
         dispatch(showLoading())

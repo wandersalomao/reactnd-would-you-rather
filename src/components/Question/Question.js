@@ -16,7 +16,7 @@ class Question extends Component {
 
     handleOnClick() {
         const { id } = this.props
-        history.push(`/app/question/${id}`)
+        history.push(`/app/questions/${id}`)
     }
 
     render() {

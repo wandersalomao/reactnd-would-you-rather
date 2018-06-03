@@ -1,0 +1,41 @@
+.main-404 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+}
+
+.title-404 {
+    font-size: 11em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 130%;
+    font-weight: normal;
+    color: #191919;
+}
+
+.line_1_404 {
+    font-size: 2em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.line_2_404 {
+    font-size: 1.1em;
+    border-bottom: solid 1px #E8E8E8;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+.home-button {
+    background-color: rgb(41, 202, 99);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    font-size: 1.1em;
+    width: 100px;
+    height: 50px;
+}

@@ -34,7 +34,7 @@ class LoginPage extends Component {
                             name="username" 
                             component={InputField}
                             type="text" 
-                            label="Username" 
+                            placeholder="Username" 
                             validate={[requiredValidation]} />
                     </SubmitForm>
 

@@ -37,8 +37,12 @@ function mapStateToProps({ auth, questions, users }, { filterOption }) {
     const answered = Object.keys(user.answers)
     const unanswered = Object.keys(questions).filter(id => !answered.includes(id))
 
+    // sort the question list by the time of creation from the most recent to the older ones.
+    let questionList = filterOption === QUESTIONS_FILTER.ANSWERED ? answered : unanswered
+    questionList = questionList.sort((a, b) => questions[b].timestamp - questions[a].timestamp)
+
     return {
-        questionList: filterOption === QUESTIONS_FILTER.ANSWERED ? answered : unanswered
+        questionList
     }
 }
 

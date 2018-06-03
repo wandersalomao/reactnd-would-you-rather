@@ -1,0 +1,65 @@
+.leaderboard-list {
+    margin: 0;
+	padding: 0px 40px;
+	list-style-type: none;
+}
+
+.leaderboard-entry {
+    display: flex;
+    border: 1px transparent;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 25px;
+    color: green;
+}
+
+.rank {
+    display: flex;
+    flex-direction: row;
+}
+
+.rank span {
+    align-self: center;
+    color: rgb(171, 171, 171)
+}
+
+.rank hr {
+    align-self: center;
+    height: 100%;
+    border: none;
+    border-left: 1px solid rgb(171, 171, 171);
+    width: 1px;
+    margin: 10px;
+}
+
+.entry-user {
+    display: flex;
+    flex: 0.70;
+}
+
+.entry-user > * {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.entry-trophy {
+    color: gold;
+    flex: 0.15;
+    display: flex;
+    align-items: center;
+}
+
+.entry-info {
+    flex: 0.30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry-info span:first-child {
+    color: rgb(171, 171, 171);
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
