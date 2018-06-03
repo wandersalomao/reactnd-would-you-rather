@@ -11,6 +11,10 @@ export function loadUsers(users) {
     }
 }
 
+/**
+ * Action used to add a new user. Used when a new user is signed up. 
+ * @param {*} user - the user being added to the store. 
+ */
 export function addUser(user) {
     return {
         type: ADD_USER,

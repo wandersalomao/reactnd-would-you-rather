@@ -1,4 +1,6 @@
 
+// This file contains helper functions used to validate input fields. 
+
 export const requiredValidation = value => (value ? undefined : 'This field is required')
 
 export const emailValidation = value =>
