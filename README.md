@@ -18,19 +18,21 @@ The app has a login page that allows the user to log in using a valid username. 
 
 New users can create a new account through the Sign up page by providing a username and a full name. Since we are using a memory database, it's out of the scope of this project to allow the user to submit a profile image and a default image will be used for new users instead.
 
+The user must be authenticated to be able to access the dashboard functions. If the user tries to access one of the dashboard pages without being logged in, the user will be redirected to the login page. 
+
 <img src="screenshots/Login.png" width="300">
 <img src="screenshots/Signup.png" width="300">
 
 ## Unanswered Questions
 
-Once the user is logged in, the dashboard will display the list of unanswered questions by default. Each questions lists the user that posted the question, the title "Would you rather" as well as the two options that can be selected by the user. The user can navigate between the unanswered and answered question using the navigation links. 
+Once the user is logged in, the dashboard will display the list of unanswered questions by default. Each question lists the user that posted the question, the title "Would you rather" as well as the two options that can be selected by the user. The user can navigate between the unanswered and answered questions using the navigation links. 
 
 <img src="screenshots/Unanswered.png" width="300">
 <img src="screenshots/Answered.png" width="300">
 
 ## Question Details
 
-When clicking on a question, the user is redirected to the Question Page. If it's an answered questions the user will see all the details of the question such as number of votes, percentage and an indication of the option the user has selected. If the question in unanswered, the user will be able to vote in one of the options. Once a question is voted, the details of the questions are also displayed.
+When clicking on a question, the user is redirected to the Question Page. If it's an answered questions the user will see all the details of the question such as number of votes, percentage and an indication of the option the user has selected. If the question in unanswered, the user will be able to vote in one of the options. Once a question is voted, the details of that question are also displayed.
 
 <img src="screenshots/UnansweredDetails.png" width="300">
 <img src="screenshots/AnsweredDetails.png" width="300">
@@ -52,6 +54,12 @@ The app has a leaderboard that’s available at the /leaderboard route. Each ent
 - Score (asked + answered)
 
 <img src="screenshots/Leaderboard.png" width="300">
+
+## 404 Page
+
+If the user tries to access a route that doesn't exist, the 404 page is displayed. 
+
+<img src="screenshots/PageNotFound.png" width="300">
 
 ## Table of Contents
 
