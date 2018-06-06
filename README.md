@@ -64,6 +64,7 @@ If the user tries to access a route that doesn't exist, the 404 page is displaye
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+  - [npm install](#npm-install)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)  
@@ -71,6 +72,10 @@ If the user tries to access a route that doesn't exist, the 404 page is displaye
 ## Getting Started
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install the dependencies in the local node_modules folder.
 
 ### `npm start`
 

@@ -2,15 +2,16 @@ import { LOAD_QUESTIONS, SAVE_QUESTION, SAVE_QUESTION_ANSWER } from '../actions/
 
 export default function questions(state = {}, action) {
     switch (action.type) {
-        case LOAD_QUESTIONS: 
+        case LOAD_QUESTIONS: {
 			return { ...state, ...action.questions }
-			
-		case SAVE_QUESTION:
+		}	
+		case SAVE_QUESTION: {
 			return { 
 				...state, 
 				[action.question.id]: action.question
 			}
-        case SAVE_QUESTION_ANSWER: 
+		}
+        case SAVE_QUESTION_ANSWER: {
             const { authedUser, qid, answer } = action.info
 			return {
 				...state,
@@ -22,8 +23,9 @@ export default function questions(state = {}, action) {
 					}
 				}
 			}
-            
-        default:
-            return state
+		}    
+        default: {
+			return state
+		}
     }
 }
